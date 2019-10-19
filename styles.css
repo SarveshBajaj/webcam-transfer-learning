@@ -16,7 +16,7 @@
  */
 
 html, body {
-  background: transparent;
+  background-image: url("./images/wallpaper.jpg");
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -161,11 +161,12 @@ header b {
   flex-direction: row;
 }
 .big-buttons button span {
-  border-bottom: 2px solid #484848;
-  border-top: 2px solid #484848;
+  /* border-bottom: 2px solid #484848;
+  border-top: 2px solid #484848; */
+  font-style: oblique;
   color: black;
   display: inline-block;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   padding: 9px 11px;
   text-align: left;
