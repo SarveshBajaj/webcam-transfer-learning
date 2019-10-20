@@ -16,6 +16,8 @@
  */
 
 import * as tf from '@tensorflow/tfjs';
+// import * as tfn from '@tensorflow/tfjs
+// const tfn = require("@tensorflow/tfjs-node");
 
 import {ControllerDataset} from './controller_dataset';
 import * as ui from './ui';
@@ -37,8 +39,11 @@ let model;
 // Loads mobilenet and returns a model that returns the internal activation
 // we'll use as input to our classifier model.
 async function loadTruncatedMobileNet() {
+  // const handler = tf.io.fileSystem('./model.json');
   const mobilenet = await tf.loadLayersModel(
       'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
+      // 'http://localhost:5000/model');
+      // handler);
 
   // Return a model that outputs an internal activation.
   const layer = mobilenet.getLayer('conv_pw_13_relu');
